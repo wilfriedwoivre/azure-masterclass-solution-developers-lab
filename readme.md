@@ -42,4 +42,3 @@
 
 - Az function
 - Az Logic Apps
-
