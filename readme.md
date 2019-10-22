@@ -27,7 +27,7 @@
 - app sans managed Id
 - app avec managed Id
 
-## App Insigths
+## Application Insights
 
 - ds la même app ci-dessus ajoute l'instrumentation key et check Realtime Monitoring
 - retire managed Id et recheck Realtime Monitoring
