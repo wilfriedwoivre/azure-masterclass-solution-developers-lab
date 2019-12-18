@@ -2,7 +2,7 @@
 
 ## Cloner votre repo Azure DevOps
 
-Depuis Azure Cloud Shell, il faut générer une clé SSH via la commande suivante : 
+Depuis [Azure Cloud Shell](https://shell.azure.com), il faut générer une clé SSH via la commande suivante :
 
 ```bash
  ssh-keygen -C "myaccount@mydomain.com"
@@ -10,14 +10,13 @@ Depuis Azure Cloud Shell, il faut générer une clé SSH via la commande suivant
 
 Par défaut votre clé SSH va se retrouver dans le dossier suivant
 
-
 ```bash
 ls /home/<usr>/.ssh/
 -rw------- 1 <usr> <usr> 1766 Oct 22 13:11 id_rsa
 -rw-r--r-- 1 <usr> <usr>  427 Oct 22 13:11 id_rsa.pub
 ```
 
-Récupérer le contenu de votre fichier ***id_rsa.pub*** et copier le. 
+Récupérer le contenu de votre fichier ***id_rsa.pub*** et copier le.
 
 Dans Azure DevOps, dans les paramètres de sécurité
 

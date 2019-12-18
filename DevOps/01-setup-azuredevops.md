@@ -16,7 +16,7 @@ Ce projet doit être **privé**, je vais pour ma part l'appeler *SOAT_AzureMaste
 
 ## Connexion à Azure
 
-### Création d'un application
+### Création d'une application
 
 Sur le portail [Azure](https://portal.azure.com) et se rendre sur le service **Azure Active Directory** > **App Registrations**
 
