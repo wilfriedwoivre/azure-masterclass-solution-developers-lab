@@ -118,6 +118,7 @@ router.get('/', async function (req, res, next) {
 ## Déployer sur une Web App Azure
 
 ### Création de votre Web App
+
 Pour cela, on va créer une Azure Web App sous Linux avec une version de Node.js en LTS.
 
 Vu que vous avez tous suivi la MasterClass Azure Developer, aucun problème pour vous !
