@@ -20,7 +20,7 @@ Maintenant à vous d'ajouter des secrets dans votre Key Vault à l'aide d'az cli
 
 ## Via une application en node.js
 
-### Récupération de l'exemple 
+### Récupération de l'exemple
 
 Via votre Cloud Shell, commencez par clone le repository suivant : [azure-keyvault-nodejs-lab](https://github.com/wilfriedwoivre/azure-keyvault-nodejs-lab)
 
@@ -144,6 +144,7 @@ Pour cela il faut ajouter les **ApplicationSettings** suivant :
 - **TENANT_ID** : Votre DirectoryId récupéré précédemment
 - **CLIENT_ID** : Votre ApplicationId récupérée précédement
 - **CLIENT_SECRET** : Le secret de votre application
+- **KEYVAULT_NAME** : Le nom de votre KeyVault
 
 <details>
 <summary>Spoiler Alert !</summary>
