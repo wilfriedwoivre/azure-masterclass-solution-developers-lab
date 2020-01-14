@@ -32,7 +32,7 @@ Ce qu'il faut récupérer après la création de votre application, ce sont les 
 Ensuite il vous faut une clé de sécurité où un certificat pour vous authentifier à Azure grâce à cette application.
 Ici on va créer un **secret** avec une durée de vie de 1 an.
 
-Ne pas oublier de copier la valeur de ce secret : 
+Ne pas oublier de copier la valeur de ce secret :
 
 Vous avez donc maintenant dans votre presse papier
 
