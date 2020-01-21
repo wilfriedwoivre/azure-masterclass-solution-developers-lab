@@ -4,11 +4,11 @@
 
 ## Storage
 
-- [] app web et blob storage + connection avec managed id
+- [ ] app web et blob storage + connection avec managed id
 
 ## Cosmos
 
-- [] trigger qui update data lors d'insert
+- [ ] trigger qui update data lors d'insert
 
 ---
 
@@ -20,19 +20,19 @@
 
 ## Application Insights
 
-- [] ds la même app ci-dessus ajoute l'instrumentation key et check Realtime Monitoring
-- [] retire managed Id et recheck Realtime Monitoring
+- [ ] ds la même app ci-dessus ajoute l'instrumentation key et check Realtime Monitoring
+- [ ] retire managed Id et recheck Realtime Monitoring
 
 ---
 
 ## Serverless
 
-- [] Az function
-- [] Az Logic Apps
+- [ ] Az function
+- [ ] Az Logic Apps
 
 ## Messaging
 
-- []  Service Bus (app demo existant) / Event Grid / Event Hub
+- [ ]  Service Bus (app demo existant) / Event Grid / Event Hub
 
 ---
 
