@@ -149,9 +149,11 @@ Pour cela il faut ajouter les **ApplicationSettings** suivant :
 
 <details>
 <summary>Spoiler Alert !</summary>
+
 ```bash
 az webapp config appsettings set -g rgName -n myAppName --settings MY_SETTINGS_NAME=value
 ```
+
 </summary>
 </details>
 
