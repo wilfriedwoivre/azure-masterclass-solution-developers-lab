@@ -8,7 +8,7 @@
 
 ## Cosmos
 
-- [ ] trigger qui update data lors d'insert
+- [x] [https://cosmosdb.github.io/labs/](https://cosmosdb.github.io/labs/)
 
 ---
 
