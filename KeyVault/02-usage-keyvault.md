@@ -183,6 +183,7 @@ git remote add azure 'scmUri/myAppName.git'
 git push azure master
 ```
 
+Après quelques secondes (minutes ...), vous pouvez vous rendre sur l'url https://myapp.azurewebsites.net/secrets et voir les secrets de votre KeyVault.
 
 ## S'affranchir du Service Principal
 
