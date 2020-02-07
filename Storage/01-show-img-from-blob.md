@@ -27,9 +27,11 @@ Gardez de côté la valeur de **cnSTO** !
 ```bash
 cntName=
 az storage container create -n $cntName --connection-string $cnSTO
+cntNameResize=thumbnails
+az storage container create -n $cntNameResize --connection-string $cnSTO
 ```
 
-Gardez de côté les valeurs de **cntName** et **cntNameResize** !
+Gardez de côté les valeurs de **cntName** !
 
 ### Ajout d'image HD/4K
 
@@ -61,7 +63,7 @@ Ajouter le script json suivant dans le fichier *appsettings.json*, pensez à ré
   "StorageInfo":{
     "ConnectionString":"...",
     "ContainerImg":"...",
-    "ContainerImgResize":"..."
+    "ContainerImgResize":"thumbnails"
   }
 ```
 
@@ -227,6 +229,26 @@ Et également le fichier *Index.cshtml* pour afficher les images :
     </p>
 </div>
 ```
+
+### Implémentation de la vue des images redimentionnées
+
+Copiez les fichiers de la vue **Index** et renommez **Thumbnail** !  
+Ajoutez un lien vers cette vue dans le fichier **_Layout.cshtml**
+
+<details>
+  <summary>Spoiler Alert !</summary>
+  
+```html
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Thumbnail">Thumbnails</a>
+                        </li>
+```
+
+</details>
+
+Et enfin implémentez la récupération des images du conteneur *thumbnails*.
+
+## TESTER L'APPLICATION
 
 Compilez et exécutez l'application à l'aide des instructions suivantes :
 
