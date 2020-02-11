@@ -55,7 +55,7 @@ cd azure-storage-dotnetcore-lab
 Pour pouvoir manipuler les objets blobs du compte de stockage nous allons installer le paquet suivant :
 
 ```bash
-dotnet add package Azure.Storage.Blobs
+dotnet add package Azure.Storage.Blobs -n
 ```
 
 ### Ajout des informations de connexion au compte de stockage
@@ -130,7 +130,7 @@ BlobContainerClient blobcntclt = cmn.CheckStorageContainer(cntName);
 List<ImageItem> result = cmn.GetStorageBlobList(blobcntclt);
 ```
 
-### Valider que toutes vos modifications fonctionnenent.
+### [Uniqumement si vous êtes en local] Valider que toutes vos modifications fonctionnenent
 
 Si vous êtes en local, vous pouvez lancer le site en local via les commandes suivantes :
 
@@ -140,18 +140,11 @@ dotnet build
 dotnet run
 ```
 
-Depuis un Cloud Shell on se contentera d'un simple restore/build afin de vérifier qu'on n'a pas fait de fautes de frappes.
-
-```bash
-dotnet restore
-dotnet build
-```
-
 ## DEPLOIEMENT
 
 ### Création de votre Web App
 
-Pour cela, on va créer une Azure Web App sous Linux avec une version de Node.js en LTS.
+Pour cela, on va créer une Azure Web App sous Linux avec une version de .Net Core en LTS.
 
 Vu que vous avez tous suivi la MasterClass Azure Developer, aucun problème pour vous !
 
@@ -163,7 +156,7 @@ Vu que vous avez tous suivi la MasterClass Azure Developer, aucun problème pour
 ```bash
 az appservice plan create -n planName -g rgName -l westeurope --is-linux --sku B1
 
-az webapp create -n myAppName -p planName -g rgName --runtime "node|lts"
+az webapp create -n myAppName -p planName -g rgName --runtime "DOTNETCORE|lts"
 ```
 
 </details>
