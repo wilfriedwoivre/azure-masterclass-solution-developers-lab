@@ -130,7 +130,7 @@ BlobContainerClient blobcntclt = cmn.CheckStorageContainer(cntName);
 List<ImageItem> result = cmn.GetStorageBlobList(blobcntclt);
 ```
 
-### [Uniqumement si vous êtes en local] Valider que toutes vos modifications fonctionnenent
+### [Uniquement si vous êtes en local] Valider que toutes vos modifications fonctionnenent
 
 Si vous êtes en local, vous pouvez lancer le site en local via les commandes suivantes :
 
