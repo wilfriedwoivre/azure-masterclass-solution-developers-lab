@@ -76,9 +76,8 @@ Depuis le portail Azure, sélectionnez la fonction **Thumbnail** et suivez les m
 
 ![](../assets/storage/event_subscription_3.png)
 
-
 ## Test du redimensionnement automatique d'image
 
 Depuis le portail Azure, ajouter à nouveau (ou les mêmes) images hautes définitions dans le premier conteneur du compte de stockage.
 
-Exécuter l'application et sélectionner la vue "Thumbnails".
+Il ne vous reste plus qu'à mettre à jour votre application pour qu'elle utilise les thumnails à la place des fichiers raw.
