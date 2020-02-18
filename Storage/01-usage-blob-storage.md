@@ -170,7 +170,7 @@ Vu que vous avez tous suivi la MasterClass Azure Developer, aucun problème pour
 ```bash
 az appservice plan create -n planName -g rgName -l westeurope --is-linux --sku B1
 
-az webapp create -n myAppName -p planName -g rgName --runtime "DOTNETCORE|lts"
+az webapp create -n myAppName -p planName -g rgName --runtime "DOTNETCORE|2.2"
 ```
 
 </details>
