@@ -33,6 +33,8 @@ az storage container create -n $cntNameResize --connection-string $cnSTO
 
 Gardez de côté les valeurs de **cntName** !
 
+*Note* : Attention aux permissions sur vos conteneurs...
+
 ### Ajout d'image HD/4K
 
 Depuis le portail Azure, ajouter des images de hautes définitions dans le premier conteneur.
@@ -55,7 +57,7 @@ cd azure-storage-dotnetcore-lab
 Pour pouvoir manipuler les objets blobs du compte de stockage nous allons installer le paquet suivant :
 
 ```bash
-dotnet add package Azure.Storage.Blobs -n
+dotnet add package Azure.Storage.Blobs
 ```
 
 ### Ajout des informations de connexion au compte de stockage
@@ -63,7 +65,7 @@ dotnet add package Azure.Storage.Blobs -n
 Modifier le fichier *appsettings.json*,  avec les paramètres que vous avez récupérer précédemment.
 
 ```json
-  "StorageInfo":{
+  "StorageOptions":{
     "ConnectionString":"##La valeur contenue dans cnSTO##",
     "ContainerImg":"##La valeur contenue dans cntName##",
     "ContainerImgResize":"thumbnails"
@@ -77,9 +79,10 @@ Nous allons donc modifier la classe *DataAccess/BlobDataAccess* en y ajoutant le
 Les différents using :
 
 ```C#
+using System.Collections.Generic;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using Soat.Labs.Models;
+using SOAT.Labs.Models;
 ```
 
 Les méthodes pour lister les fichiers disponibles dans un Blob Storage
@@ -119,15 +122,26 @@ Tout d'abord les using
 
 ```C#
 using Azure.Storage.Blobs;
-using Soat.Labs.DataAccess;
+using SOAT.Labs.DataAccess;
 ```
 
-Et enfin compléter la valeur result dans la méthode *Run* comme suit:
+Et enfin compléter la valeur result dans la méthode *LoadData* comme suit:
 
 ```C#
 var cmn = new BlobDataAccess(storageConnectionString);
 BlobContainerClient blobcntclt = cmn.CheckStorageContainer(cntName);
 List<ImageItem> result = cmn.GetStorageBlobList(blobcntclt);
+```
+
+Et pour finir on va modifier notre vue *Pages/Index.cshtml* afin d'y afficher nos images comme suit :
+
+```C#
+<div class="text-center">
+    <h3 class="display-4">Demo connexion à un compte de stockage Azure</h3>
+    <p>
+        @foreach(var imgname in Model.Images){<img src="@imgname.Url" alt="@imgname.Name"/><br>}
+    </p>
+</div>
 ```
 
 ### [Uniquement si vous êtes en local] Valider que toutes vos modifications fonctionnenent
