@@ -57,7 +57,7 @@ az functionapp create --name $functionAppName --storage-account $stoFunctionName
 Maintenant qu'elle est créée, il nous faut un accès au compte de stockage de notre application qui manipule les images. Il faut donc ajouter la chaîne de connexion vers ce compte de stockage.
 
 ```bash
-az functionapp config appsettings set --name $functionAppName --resource-group $rgName --settings AzureWebJobsStorage=$cnSTO THUMBNAIL_CONTAINER_NAME=thumbnails THUMBNAIL_WIDTH=100 FUNCTIONS_EXTENSION_VERSION=~2
+az functionapp config appsettings set --name $functionAppName --resource-group $rgName --settings AzureWebJobsStorage=$cnSTO THUMBNAIL_CONTAINER_NAME=thumbnails THUMBNAIL_WIDTH=100 FUNCTIONS_EXTENSION_VERSION=~1
 ```
 
 ## Déployer le code de la fonction depuis un dépôt GitHub
